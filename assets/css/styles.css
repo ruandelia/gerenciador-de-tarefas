@@ -1,0 +1,257 @@
+:root{
+  --bg: #f5f6fb;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+
+  --primary: #6d28d9;     /* roxo */
+  --primary-2: #7c3aed;   /* roxo claro */
+  --danger: #ef4444;
+  --shadow: 0 16px 40px rgba(17,24,39,0.10);
+}
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container{
+  width: min(920px, 92%);
+  margin: 0 auto;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.header{
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+  color: #fff;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.header__content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.header h1{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.menu a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0.95;
+}
+.menu a:hover{ opacity: 1; }
+
+/* ===========================
+   MAIN
+=========================== */
+.main{
+  padding: 28px 0 40px;
+  min-height: calc(100vh - 150px);
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+h2{
+  margin: 0 0 14px;
+  font-size: 24px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
+
+/* ===========================
+   FORM
+=========================== */
+.form{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 14px 0 12px;
+}
+
+.form input{
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #fafafa;
+  outline: none;
+  font-size: 15px;
+}
+
+.form input:focus{
+  border-color: rgba(109,40,217,0.55);
+  box-shadow: 0 0 0 4px rgba(109,40,217,0.10);
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+.btn{
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  padding: 11px 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn:hover{
+  background: #f3f4f6;
+}
+
+.btn--primary{
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.btn--primary:hover{
+  filter: brightness(1.05);
+}
+
+.btn--danger{
+  background: rgba(239,68,68,0.12);
+  border-color: rgba(239,68,68,0.25);
+  color: #991b1b;
+}
+
+.btn--small{
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+/* ===========================
+   LISTA
+=========================== */
+.list{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 12px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: transform 0.08s ease;
+}
+
+.task:hover{
+  transform: translateY(-1px);
+}
+
+.task--done{
+  opacity: 0.75;
+}
+
+.check{
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #f9fafb;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.task__content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.task__title{
+  font-weight: 800;
+}
+
+.task__meta{
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.task__actions{
+  display: flex;
+  gap: 8px;
+}
+
+.input-inline{
+  width: min(520px, 100%);
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fafafa;
+  outline: none;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer{
+  background: #0b1220;
+  color: #cbd5e1;
+  padding: 18px 0;
+  margin-top: 30px;
+}
+
+.footer__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.muted{
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+@media (max-width: 560px){
+  .form{
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
