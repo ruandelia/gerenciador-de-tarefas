@@ -18,5 +18,5 @@
 
 </section>
 
-
+<script src="../assets/js/tarefa.js"></script>
 <?php include "../includes/footer.php" ?>
